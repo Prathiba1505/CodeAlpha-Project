@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Game - Playing</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <header>
+    <h1>Multiplayer Game</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="profileBtn">Profile</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="game-container">
+      <div class="game-info">
+        <h2>Game in Progress</h2>
+        <p id="gameStatus">Waiting for opponent...</p>
+        <div id="gameBoard" class="game-board">
+        </div>
+        <button id="endGameBtn" class="btn">End Game</button>
+      </div>
+      <div class="player-stats">
+        <h3>Your Stats</h3>
+        <p>Wins: <span id="wins">0</span></p>
+        <p>Losses: <span id="losses">0</span></p>
+        <h4>Opponent's Stats</h4>
+        <p>Wins: <span id="oppWins">0</span></p>
+        <p>Losses: <span id="oppLosses">0</span></p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Multiplayer Game</p>
+  </footer>
+  <script src="game.js"></script>
+</body>
+</html>
