@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-SocioMeda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>SocioMeda<span id="username"></span></h1>
+            <nav>
+                <button id="homeBtn">Home</button>
+                <button id="profileBtn">Profile</button>
+                <button id="logoutBtn">Logout</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="profileDetails">
+            <h2>Your Profile</h2>
+            <div id="profileInfo">
+                <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+                <p><strong>Posts:</strong> <span id="postCount">0</span></p>
+                <p><strong>Followers:</strong> <span id="followersCount">0</span></p>
+                <p><strong>Following:</strong> <span id="followingCount">0</span></p>
+            </div>
+            <button id="editProfileBtn">Edit Profile</button>
+        </section>
+        <section id="userPosts">
+            <h2>Your Posts</h2>
+            <div id="userPostList"></div>
+        </section>
+    </main>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Social Media Platform</p>
+    </footer>
+    <div id="editProfilePopup" class="editProfilePopup">
+        <h3>Edit Profile</h3>
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" placeholder="Enter new username">
+        <button id="saveChangesBtn">Save Changes</button>
+        <button id="cancelChangesBtn">Cancel</button>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

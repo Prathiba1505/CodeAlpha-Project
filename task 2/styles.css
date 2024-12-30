@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.navbar {
+    background-color: #1e90ff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar nav {
+    display: flex;
+}
+.navbar button {
+    background-color: #1e90ff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.navbar button:hover {
+    background-color: #4169e1;
+}
+main {
+    padding: 20px;
+}
+#createPost {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+#createPost h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#createPost textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#createPost button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+#createPost button:hover {
+    background-color: #218838;
+}
+#posts {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#posts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#postList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.post h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.post span {
+    font-size: 14px;
+    color: #555;
+}
+.post button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.post button:hover {
+    background-color: #ddd;
+}
+.post .like, .post .comment {
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+.post .like:hover, .post .comment:hover {
+    background-color: #ddd;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1e90ff;
+    color: white;
+    margin-top: 20px;
+}
+.likePopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+#profileDetails {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+#profileDetails h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#profileInfo {
+    font-size: 18px;
+}
+#profileInfo p {
+    margin: 10px 0;
+}
+#editProfileBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+#editProfileBtn:hover {
+    background-color: #218838;
+}
+#userPosts {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#userPosts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#userPostList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profilePost {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.profilePost p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.profilePost span {
+    font-size: 14px;
+    color: #e66f6f;
+}
+.profilePost button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.profilePost button:hover {
+    background-color: #ddd;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.navbar nav button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.navbar nav button:hover {
+    background-color: #555;
+}
+main {
+    padding: 20px;
+}
+#profileDetails {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+#profileDetails h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+#profileInfo p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+button {
+    background-color: #28a745;
+    color: rgb(24, 21, 21);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #218838;
+}
+#editProfileBtn {
+    background-color: #007bff;
+    margin-top: 15px;
+}
+#editProfileBtn:hover {
+    background-color: #0056b3;
+}
+#userPosts {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#userPosts h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+#userPostList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.userPost {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+.userPost img {
+    width: 100%;
+    border-radius: 8px;
+}
+.userPost p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.editProfilePopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.813);
+    justify-content: center;
+    align-items: center;
+}
+.editProfilePopup.active {
+    display: flex;
+}
+.editProfilePopup h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.editProfilePopup label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+.editProfilePopup input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #100d0d;
+}
+.editProfilePopup button {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.editProfilePopup button:hover {
+    background-color: #218838;
+}
+#cancelChangesBtn {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+#cancelChangesBtn:hover {
+    background-color: #c82333;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
